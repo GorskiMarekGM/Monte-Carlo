@@ -31,5 +31,26 @@ namespace MonteCarlo
                 Console.WriteLine($"{arr[0, col]} days: {arr[1, col]}%");
             }
         }
+
+        //Display results
+        public static void DisplayResults(int best, int worst, int average, int examples)
+        {
+            Console.WriteLine($"After probing {examples} random plans, the results are: ");
+            Console.WriteLine("Minimum: " + best);
+            Console.WriteLine("Maximum: " + worst);
+            Console.WriteLine("Average: " + average);
+        }
+
+        //Display examples menu
+        public static int SetExamples()
+        {
+            Console.WriteLine("How many random planes do you want to generate?");
+            int examples;
+            while (!int.TryParse(Console.ReadLine(), out examples))
+            {
+                Console.WriteLine("Wrong number, try again");
+            }
+            return examples;
+        }
     }
 }

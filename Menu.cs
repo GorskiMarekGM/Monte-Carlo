@@ -45,8 +45,6 @@ namespace MonteCarlo
                 iterator++;
             }
             maxi = maxi + 1;
-            Console.WriteLine("maxi: " + maxi);
-            Console.WriteLine("iterator: " + iterator);
 
             int[,] MatrixInt = new int[iterator, maxi];
 
