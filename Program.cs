@@ -18,22 +18,16 @@ namespace MonteCarlo
             int[,] rangeMatrix = new int[2,range];
 
             Display.DisplayMatrix(rangeMatrix,2,range);
-
-            for (int i=0; i<intNumbers.GetLength(0); i++)
-            {
-                best += intNumbers[i,0];
-                average += intNumbers[i,1];
-                worst += intNumbers[i,2];
-            }
-
-            RandomPlan.GenerateRandomPlan(10, intNumbers);
-            RandomPlan.estimationDisplay();
-
+            
             examples = Display.SetExamples();
 
             //Monte Carlo
             //int[] inum = Array_Operations.GenerateRandomArray(examples, best, worst);
-            int[] inum = RandomPlan.NRandomPlans(examples, intNumbers);
+            int[] inum = RandomPlan.GenerateRandomPlan(examples, intNumbers);
+            //RandomPlan.estimationDisplay();
+
+            best = Array_Operations.ArrayAverage(RandomPlan.best);
+            worst = Array_Operations.ArrayAverage(RandomPlan.worst);
 
             average = Array_Operations.ArrayAverage(inum);
 

@@ -8,17 +8,19 @@ namespace MonteCarlo
 {
     static class RandomPlan
     {
-        static private int[] estimation;
+        static public int[] estimation, worst, best;
         
-        private static void setEstimation(int col)
+        private static void setTables(int col)
         {
             estimation = new int[col];
+            worst = new int[col];
+            best = new int[col];
         }
 
-        public static void GenerateRandomPlan(int n,int[,] arr)
+        public static int[] GenerateRandomPlan(int n,int[,] arr)
         {
             Random randNum = new Random();
-            setEstimation(n);
+            setTables(n);
 
             for (int j = 0; j < n; j++)
             {
@@ -26,8 +28,11 @@ namespace MonteCarlo
                 {
                     int random = randNum.Next(0, arr.GetLength(1));
                     estimation[j] += arr[i, random];
+                    worst[j] += arr[i, arr.GetLength(1)-1];
+                    best[j] += arr[i, 0];
                 }
             }
+            return estimation;
         }
 
         public static void estimationDisplay()

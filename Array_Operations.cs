@@ -16,7 +16,7 @@ namespace MonteCarlo
             Random randNum = new Random();
             for (int i = 0; i < randomArray.Length; i++)
             {
-                randomArray[i] = randNum.Next(min, max);
+                randomArray[i] = randNum.Next(min,max);
             }
             return randomArray;
         }
@@ -59,6 +59,18 @@ namespace MonteCarlo
                 arr[1, i] = arr[1, i - 1] + arr[1, i];
             }
             return arr;
+        }
+
+        //Sum values
+        public static int SumArray(int[] arr)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
         }
 
     }
