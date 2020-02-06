@@ -1,0 +1,7 @@
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\bin\Debug\MonteCarlo.exe.config
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\bin\Debug\MonteCarlo.exe
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\bin\Debug\MonteCarlo.pdb
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\obj\Debug\MonteCarlo.csprojAssemblyReference.cache
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\obj\Debug\MonteCarlo.csproj.CoreCompileInputs.cache
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\obj\Debug\MonteCarlo.exe
+C:\Users\Nauka\source\repos\MonteCarlo\MonteCarlo\obj\Debug\MonteCarlo.pdb
